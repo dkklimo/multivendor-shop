@@ -5,6 +5,7 @@ import ProductDetails from "../components/Products/ProductDetails.jsx"
 import { useParams } from 'react-router-dom'
 import { useEffect,useState } from 'react'
 import { productData } from '../static/data.js'
+import SuggestedProduct from "../components/Products/SuggestedProduct.jsx"
 
 const ProductDetailsPage = () => {
     const {name} = useParams();
@@ -21,6 +22,9 @@ const ProductDetailsPage = () => {
  <div>
     <Header/>
     <ProductDetails data={data}/>
+    {
+      data && <SuggestedProduct data={data}/>
+    }
     <Footer/>
  </div>
   )

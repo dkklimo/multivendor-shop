@@ -35,6 +35,8 @@ router.post("/create-user",upload.single("file"),async (req,res,next)=>{
 
     const filename = req.file.filename;
     const fileUrl = path.join(filename);
+    // const filename = req.file.filename;
+    // const filepath = `uploads/${filename}`;
 
     const user ={
         name:name,
